@@ -30,7 +30,6 @@ header {
 	color: white;
 	padding-bottom: 1%
 }
-
 .padded {
 	padding: 20% 0;
 	width: 100%
@@ -50,7 +49,8 @@ header {
 	color: gray;
 	font-size: 40px;
 	font-family: lato;
-	margin-left: 0.5%;
+	margin-left: 0%;
+	
 }
 
 div {
@@ -70,29 +70,35 @@ button {
     text-decoration: none;
     display: inline-block;
     font-size: 18px;
+	margin-top: 0.5%;
 }
+
 
 button:hover {
 	background-color: #3B873F;
+}
+
+.clearer {
+	background-color: gray;
+	/* hover covered through scripting; css fails*/
 }
 
 ul {
 	list-style-type: none;
 	color: white;
 	font-size: 35px;
-	width: 100%;
-	
+	margin-left: 2.5%;
 }
 
 li {
 	margin-bottom: 0.5%;
-	margin-top: 0.5%;
+	margin-top: 1%;
+	margin-right: 5.5%;
 }
 
 .libg {
-	background: gray;
+	border: solid 2px wheat;
 	border-radius: 5px;
-
 }
 	
 body {
