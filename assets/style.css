@@ -220,9 +220,15 @@ html {
 
 .recipe {
 	width: 100%;
-	margin-left: 0px;
+	margin-left: 2%;
+	margin-right: -2%;
 	border: 2px solid #73AD21;
-	padding-top: 10px;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	border-radius: 5px;
+	justify-content: center;
+	width: 96%;
+	
 }
 
 
@@ -234,8 +240,7 @@ html {
 	font-family: lato;
 	font-size: 40px;
 	text-align: left;
-	text-indent: 200px;
-	width: 100%;
+	width: auto;
 	line-height: 120%;
 	margin-top: -20px;
 	margin-bottom: 0px;
@@ -252,17 +257,15 @@ hover {
 	font-family: lato;
 	font-size: 27px;
 	text-align: left;
-	text-indent: 200px;
 	margin-top: 0px;
-
 }
 
 .recipe h3 {
 	color: gray;
 	font-family: lato;
-	font-size: 30px;
+	font-size: 25px;
 	text-align: left;	
-	text-indent: 200px;
+	display: inline;
 }
 
 .recipe a {
@@ -271,8 +274,14 @@ hover {
 }
 
 .recipe img {
-	width: 150px;
+	/*width: 150px;*/
 	height: 150px;
 	float: left;
 	margin-left: 2%;
+	margin-right: 2%;
+	border-radius: 5px;
+}
+
+.recipe rank {
+	
 }

@@ -103,11 +103,11 @@ $(document).ready(function() {
 				for (var i = 0; i < data["recipes"].length; i++) {
 					
 					parseddata += ('<li class="recipe">'
-								+'<div><a href="'+data["recipes"][i]["source_url"]+'"><img src="'+data["recipes"][i]["image_url"]+'"></img></a></div>'
-								+'<div><h1><a href="'+data["recipes"][i]["source_url"]+'">'+data["recipes"][i]["title"]+'</a></h1>'
+								+'<a href="'+data["recipes"][i]["source_url"]+'"><img src="'+data["recipes"][i]["image_url"]+'"></img></a>'
+								+'<span><h1><a href="'+data["recipes"][i]["source_url"]+'">'+data["recipes"][i]["title"]+'</a></h1>'
 								+'<h2>by '+data["recipes"][i]["publisher"]+'</h2>'
 								+'<h3>Social Rank</h3>'
-								+'<span class="SOMETHING">'+data["recipes"][i]["social_rank"]+'</span></div></li>');
+								+'<span class="rank">'+data["recipes"][i]["social_rank"]+'</span></span></li>');
 				}
 				if (data["recipes"].length === 0) {
 					parseddata += '<span class="error">Alphabet Soup!  It looks like there\'s nothing containing all of your ingredients.  Please try a less detailed search.</span>';
