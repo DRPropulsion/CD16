@@ -240,6 +240,11 @@ html {
 	margin-bottom: 0px;
 	
 }
+hover {
+	text-decoration: underline;
+	color: blue;
+	
+}
 
 .recipe h2 {
 	color: gray;
