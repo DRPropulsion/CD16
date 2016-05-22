@@ -25,7 +25,7 @@ function addToList() {
 	if (input !== "")
 	{
 		document.getElementById("inputBox").value = "";
-		document.getElementById("list").innerHTML += ('<li><span class="libg">'+input+'</span></li>');
+		document.getElementById("list").innerHTML += ('<li><span class="libg" onclick="remove(this)">'+input+'</span></li>');
 	} 
 }
 
@@ -41,7 +41,7 @@ $(document).ready(function() {
 		//$.get("http://food2fork.com/api/search?key=c8b4412d38aeeade93c0bab3425f24ce&q=", function(data) {
 		var listofingredients = document.getElementById("list").innerHTML;
 		//console.log(listofingredients);
-		var unparsedingredientsquery = listofingredients.split(('</span></li><li><span class="libg">'));
+		var unparsedingredientsquery = listofingredients.split(('</span></li><li><span class="libg" onclick="remove(this)">'));
 		var ingredientquery = "";
 		var postedingredients = "<p>You searched for: ";
 		for (var i = 0; i < unparsedingredientsquery.length; i++) {
@@ -49,7 +49,7 @@ $(document).ready(function() {
 				var item = unparsedingredientsquery[i];
 				item = item.substring(0, item.length - 12);
 				if (i===0) {
-					item = item.substring(23);
+					item = item.substring(46);
 				}
 				postedingredients += ('<span class="libg">'+item+'</span>');
 				ingredientquery += item;
@@ -103,11 +103,11 @@ $(document).ready(function() {
 				for (var i = 0; i < data["recipes"].length; i++) {
 					
 					parseddata += ('<li class="recipe">'
-								+'<div><a href="'+data["recipes"][i]["source_url"]+'"><img src="'+data["recipes"][i]["image_url"]+'"></img></a></div>'
-								+'<div><h1><a href="'+data["recipes"][i]["source_url"]+'">'+data["recipes"][i]["title"]+'</a></h1>'
+								+'<a href="'+data["recipes"][i]["source_url"]+'"><img src="'+data["recipes"][i]["image_url"]+'"></img></a>'
+								+'<span><h1><a href="'+data["recipes"][i]["source_url"]+'">'+data["recipes"][i]["title"]+'</a></h1>'
 								+'<h2>by '+data["recipes"][i]["publisher"]+'</h2>'
 								+'<h3>Social Rank</h3>'
-								+'<span class="SOMETHING">'+data["recipes"][i]["social_rank"]+'</span></div></li>');
+								+'<span class="rank">'+data["recipes"][i]["social_rank"]+'</span></span></li>');
 				}
 				if (data["recipes"].length === 0) {
 					parseddata += '<span class="error">Alphabet Soup!  It looks like there\'s nothing containing all of your ingredients.  Please try a less detailed search.</span>';
