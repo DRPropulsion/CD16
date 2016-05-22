@@ -220,7 +220,7 @@ html {
 
 .recipe {
 	width: 100%;
-	margin-left: -30px;
+	margin-left: 0px;
 	border: 2px solid #73AD21;
 	padding-top: 10px;
 }
