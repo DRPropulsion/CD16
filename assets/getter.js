@@ -68,8 +68,8 @@ $(document).ready(function() {
 				
 				parseddata += ('<li class="recipe">'
 							+'<h1><a href="'+data["recipes"][i]["source_url"]+'">'+data["recipes"][i]["title"]+'</a></h1>'
-							+'<img src="'+data["recipes"][i]["image_url"]+'"></img>'
-							+'<h2>'+data["recipes"][i]["publisher"]+'</h2>'
+							+'<a href="'+data["recipes"][i]["source_url"]+'"><img src="'+data["recipes"][i]["image_url"]+'"></img></a>'
+							+'<h2>by '+data["recipes"][i]["publisher"]+'</h2>'
 							+'<h3>Social Rank</h3>'
 							+'<span class="SOMETHING">'+data["recipes"][i]["social_rank"]+'</span></li>');
 			}

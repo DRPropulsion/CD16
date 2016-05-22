@@ -244,3 +244,10 @@ html {
 	color: gray;
 	text-decoration: none;
 }
+
+.recipe img {
+	width: 200px;
+	height: 200px;
+	float: left;
+	margin-left: 2%;
+}
