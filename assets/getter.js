@@ -15,6 +15,7 @@ function checkForEnter() {
 	if (event.keyCode == 13)
 	{
 		addToList();
+		document.getElementById("inputBox").placeholder = "";
 	}
 }
 
@@ -63,55 +64,60 @@ $(document).ready(function() {
 			}
 		}
 		postedingredients += "</p>";
-		$.get("https://cz9dldanfb.execute-api.us-east-1.amazonaws.com/prod/ingredient/"+ingredientquery, function(data) {
-			//console.log(data);
-			document.getElementById("postedlist").innerHTML = "";
-			document.getElementById("recipelist").innerHTML = "";
-			var parseddata = "";
-/* 			var unparsedingredients = listofingredients.split("</li><li>");
-			var postedingredients = "<p>You searched for: ";
-			
-			for (var i = 0; i < unparsedingredients.length; i++) {
-				if (i === unparsedingredients.length - 1) {
-					var item = unparsedingredients[i];
-					item = item.substring(0, item.length-5);
-					postedingredients += item;
-				}
-				else {
-					var item = unparsedingredients[i];
-					if (i===0) {
-						item = item.substring(4);
-					}
-					postedingredients += item + " ";
-				}
-			}
-
-			postedingredients += "</p>"; */
-			
-			/*THIS IS HOW YOU PARSE THE JSON
-			for (var i = 0; i < data["recipes"].length; i++)
-			{
-				console.log(data["recipes"][i]);
-			}
-			*/
-			
-			for (var i = 0; i < data["recipes"].length; i++) {
+		if (ingredientquery==="") {
+			document.getElementById("inputBox").placeholder = "You can't cook without ingredients!";
+		}
+		else {
+			$.get("https://cz9dldanfb.execute-api.us-east-1.amazonaws.com/prod/ingredient/"+ingredientquery, function(data) {
+				//console.log(data);
+				document.getElementById("postedlist").innerHTML = "";
+				document.getElementById("recipelist").innerHTML = "";
+				var parseddata = "";
+	/* 			var unparsedingredients = listofingredients.split("</li><li>");
+				var postedingredients = "<p>You searched for: ";
 				
-				parseddata += ('<li class="recipe">'
-							+'<div><a href="'+data["recipes"][i]["source_url"]+'"><img src="'+data["recipes"][i]["image_url"]+'"></img></a></div>'
-							+'<div><h1><a href="'+data["recipes"][i]["source_url"]+'">'+data["recipes"][i]["title"]+'</a></h1>'
-							+'<h2>by '+data["recipes"][i]["publisher"]+'</h2>'
-							+'<h3>Social Rank</h3>'
-							+'<span class="SOMETHING">'+data["recipes"][i]["social_rank"]+'</span></div></li>');
-			}
-			if (data["recipes"].length === 0) {
-				parseddata += '<span class="error">Alphabet Soup!  It looks like there\'s nothing containing all of your ingredients.  Please try a less detailed search.</span>';
-			}
-			var modalobject = document.getElementById("recipeModal")
-			document.getElementById("postedlist").innerHTML += postedingredients;
-			document.getElementById("recipelist").innerHTML += parseddata;
-			modalobject.style.display = "block";
-		});
+				for (var i = 0; i < unparsedingredients.length; i++) {
+					if (i === unparsedingredients.length - 1) {
+						var item = unparsedingredients[i];
+						item = item.substring(0, item.length-5);
+						postedingredients += item;
+					}
+					else {
+						var item = unparsedingredients[i];
+						if (i===0) {
+							item = item.substring(4);
+						}
+						postedingredients += item + " ";
+					}
+				}
+
+				postedingredients += "</p>"; */
+				
+				/*THIS IS HOW YOU PARSE THE JSON
+				for (var i = 0; i < data["recipes"].length; i++)
+				{
+					console.log(data["recipes"][i]);
+				}
+				*/
+				
+				for (var i = 0; i < data["recipes"].length; i++) {
+					
+					parseddata += ('<li class="recipe">'
+								+'<div><a href="'+data["recipes"][i]["source_url"]+'"><img src="'+data["recipes"][i]["image_url"]+'"></img></a></div>'
+								+'<div><h1><a href="'+data["recipes"][i]["source_url"]+'">'+data["recipes"][i]["title"]+'</a></h1>'
+								+'<h2>by '+data["recipes"][i]["publisher"]+'</h2>'
+								+'<h3>Social Rank</h3>'
+								+'<span class="SOMETHING">'+data["recipes"][i]["social_rank"]+'</span></div></li>');
+				}
+				if (data["recipes"].length === 0) {
+					parseddata += '<span class="error">Alphabet Soup!  It looks like there\'s nothing containing all of your ingredients.  Please try a less detailed search.</span>';
+				}
+				var modalobject = document.getElementById("recipeModal")
+				document.getElementById("postedlist").innerHTML += postedingredients;
+				document.getElementById("recipelist").innerHTML += parseddata;
+				modalobject.style.display = "block";
+			});
+		}
 	});
 	$(".clearer").hover(function(){
 		document.getElementById("clearbutton").style.backgroundColor = "grey";
