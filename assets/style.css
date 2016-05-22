@@ -1,18 +1,18 @@
 @font-face {
 	font-family:bariol;
-	src:url(bariol_regular-webfont.ttf); }
+	src:url(fonts/bariol_regular-webfont.ttf); }
 
 @font-face {
 	font-family:script;
-	src:url(Arizonia-Regular.ttf); }
+	src:url(fonts/Arizonia-Regular.ttf); }
 	
 @font-face {
 	font-family:lato;
-	src:url(Lato-Regular.ttf); }
+	src:url(fonts/Lato-Regular.ttf); }
 	
 @font-face {
 	font-family:lato-light;
-	src:url(Lato-Light.ttf); }
+	src:url(fonts/Lato-Light.ttf); }
 
 html, body {
 height:auto;
@@ -23,16 +23,33 @@ padding: 0;
 
 header {
 	justify-content: center;
-	font-size: 50px;
+	font-size: 75px;
 	margin-bottom: 0;
 	margin-top: 1%;
-	font-family: lato;
+	font-family: lato-light;
 	color: white;
+	padding-bottom: 1%
 }
 
 .padded {
 	padding: 20% 0;
+	width: 100%
 	}
+	
+.holddiv {
+
+}
+	
+.textbox {
+	border-radius: 5px;
+	padding-top: 0.5%;
+	width: 40%;
+	max-width: inherit;
+	color: gray;
+	font-size: 40px;
+	font-family: lato;
+	margin-left: 0.5%;
+}
 
 div {
 	clear: none;
@@ -52,12 +69,27 @@ body {
 	color: black;
 	text-align: center;
 	justify-content: center; 
-	background-image: url(bg.jpg); 
+	/*background-image: url(bg.jpg); 
 	background-attachment:fixed;
 	background-size: cover;
 	background-repeat: no-repeat;
 	-moz-background-size: cover;
 	-o-background-size: cover;
-	-webkit-background-size: cover;
+	-webkit-background-size: cover;*/
 	
 }
+
+html {
+	background: url(bg.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.recipe {
+	background-color: gold;
+	border-radius: 5px;
+	
+}
+
