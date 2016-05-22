@@ -284,6 +284,8 @@ html {
 	border-radius: 5px;
 }
 
-.recipe rank {
-	
+.rank {
+	border-radius: 5px;
+	background-color: gray;
+	color: #FFD700;
 }
