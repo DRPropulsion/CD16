@@ -24,7 +24,7 @@ function addToList() {
 	if (input !== "")
 	{
 		document.getElementById("inputBox").value = "";
-		document.getElementById("list").innerHTML += ('<li><span class="libg">'+input+'</li>');
+		document.getElementById("list").innerHTML += ('<li><span class="libg">'+input+'</span></li>');
 	} 
 }
 
@@ -36,16 +36,39 @@ function clearList() {
 
 //jquery functions: api ping and hover coloration for clear button
 $(document).ready(function() {
-	$("#searchbutton").click(function() { //TODO: grab list of ingredients, sorting
+	$("#searchbutton").click(function() { 
 		//$.get("http://food2fork.com/api/search?key=c8b4412d38aeeade93c0bab3425f24ce&q=", function(data) {
-		$.get("https://cz9dldanfb.execute-api.us-east-1.amazonaws.com/prod/ingredient/bread", function(data) {
+		var listofingredients = document.getElementById("list").innerHTML;
+		//console.log(listofingredients);
+		var unparsedingredientsquery = listofingredients.split(('</span></li><li><span class="libg">'));
+		var ingredientquery = "";
+		var postedingredients = "<p>You searched for: ";
+		for (var i = 0; i < unparsedingredientsquery.length; i++) {
+			if (i === unparsedingredientsquery.length - 1) {
+				var item = unparsedingredientsquery[i];
+				item = item.substring(0, item.length - 12);
+				if (i===0) {
+					item = item.substring(23);
+				}
+				postedingredients += ('<span class="libg">'+item+'</span>');
+				ingredientquery += item;
+			}
+			else {
+				var item = unparsedingredientsquery[i];
+				if (i===0) {
+					item = item.substring(23);
+				}
+				postedingredients += ('<span class="libg">'+item+'</span>') + " ";
+				ingredientquery += item + "%2C%20";
+			}
+		}
+		postedingredients += "</p>";
+		$.get("https://cz9dldanfb.execute-api.us-east-1.amazonaws.com/prod/ingredient/"+ingredientquery, function(data) {
 			//console.log(data);
 			document.getElementById("postedlist").innerHTML = "";
 			document.getElementById("recipelist").innerHTML = "";
-			var listofingredients = document.getElementById("list").innerHTML;
-			console.log(listofingredients);
-			var unparsedingredients = listofingredients.split("</li><li>");
 			var parseddata = "";
+/* 			var unparsedingredients = listofingredients.split("</li><li>");
 			var postedingredients = "<p>You searched for: ";
 			
 			for (var i = 0; i < unparsedingredients.length; i++) {
@@ -63,7 +86,7 @@ $(document).ready(function() {
 				}
 			}
 
-			postedingredients += "</p>";
+			postedingredients += "</p>"; */
 			
 			/*THIS IS HOW YOU PARSE THE JSON
 			for (var i = 0; i < data["recipes"].length; i++)
@@ -80,6 +103,9 @@ $(document).ready(function() {
 							+'<h2>by '+data["recipes"][i]["publisher"]+'</h2>'
 							+'<h3>Social Rank</h3>'
 							+'<span class="SOMETHING">'+data["recipes"][i]["social_rank"]+'</span></div></li>');
+			}
+			if (data["recipes"].length === 0) {
+				parseddata += '<span class="error">Alphabet Soup!  It looks like there\'s nothing containing all of your ingredients.  Please try a less detailed search.</span>';
 			}
 			var modalobject = document.getElementById("recipeModal")
 			document.getElementById("postedlist").innerHTML += postedingredients;

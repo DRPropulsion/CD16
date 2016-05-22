@@ -101,6 +101,19 @@ li {
 	border-radius: 5px;
 }
 
+.error {
+	font-family: lato;
+	color: black;
+	font-size: 25px;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+#recipelist {
+	margin-left: 0;
+	padding-left: 0;
+}
+
 p {
 	font-family: lato;
 	font-size: 40px;
