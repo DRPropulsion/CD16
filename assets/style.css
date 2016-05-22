@@ -50,6 +50,7 @@ header {
 	font-size: 40px;
 	font-family: lato;
 	margin-left: 0%;
+	padding-left: 0.5%;
 	
 }
 
@@ -100,6 +101,25 @@ li {
 	border: solid 2px wheat;
 	border-radius: 5px;
 }
+
+.error {
+	font-family: lato;
+	color: black;
+	font-size: 25px;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+#recipelist {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+p {
+	font-family: lato;
+	font-size: 40px;
+	color: gray;
+}
 	
 body {
 	font-family: lato;
@@ -126,11 +146,7 @@ html {
 	background-size: cover;
 }
 
-.recipe {
-	background-color: gold;
-	border-radius: 5px;
-	
-}
+
 
 .modal {
     display: none; /* Hidden by default */
@@ -153,7 +169,7 @@ html {
     margin: auto;
     padding: 0;
     border: 1px solid #888;
-    width: 80%;
+    width: 60%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
@@ -201,3 +217,62 @@ html {
     color: white;
 }
 
+
+.recipe {
+	width: 100%;
+	margin-left: -30px;
+	border: 2px solid #73AD21;
+	padding-top: 10px;
+}
+
+
+.recipe h1 {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;	
+	color: black;
+	font-family: lato;
+	font-size: 40px;
+	text-align: left;
+	text-indent: 200px;
+	width: 100%;
+	line-height: 120%;
+	margin-top: -20px;
+	margin-bottom: 0px;
+	
+}
+hover {
+	text-decoration: underline;
+	color: blue;
+	
+}
+
+.recipe h2 {
+	color: gray;
+	font-family: lato;
+	font-size: 27px;
+	text-align: left;
+	text-indent: 200px;
+	margin-top: 0px;
+
+}
+
+.recipe h3 {
+	color: gray;
+	font-family: lato;
+	font-size: 30px;
+	text-align: left;	
+	text-indent: 200px;
+}
+
+.recipe a {
+	color: gray;
+	text-decoration: none;
+}
+
+.recipe img {
+	width: 150px;
+	height: 150px;
+	float: left;
+	margin-left: 2%;
+}
