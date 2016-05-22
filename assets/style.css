@@ -42,6 +42,8 @@ header {
 	
 .textbox {
 	border-radius: 5px;
+	border-width: 2px;
+	border-color: #E8E8E8;
 	padding-top: 0.5%;
 	width: 40%;
 	max-width: inherit;
@@ -55,12 +57,24 @@ div {
 	clear: none;
 }
 
-a {
-	text-decoration: none; 
-	color: inherit;}
-	a:hover {
-	text-decoration: underline; 
-	color: #49B0C4}
+
+button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+    color: white;
+	font-family:lato;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+}
+
+button:hover {
+	background-color: #3B873F;
+}
 
 ul {
 	list-style-type: none;
