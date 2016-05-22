@@ -70,10 +70,17 @@ button {
     text-decoration: none;
     display: inline-block;
     font-size: 18px;
+	margin-top: 0.5%;
 }
+
 
 button:hover {
 	background-color: #3B873F;
+}
+
+.clearer {
+	background-color: gray;
+	/* hover covered through scripting; css fails*/
 }
 
 ul {

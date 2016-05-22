@@ -23,4 +23,29 @@ $(document).ready(function() {
 			document.getElementById("statement").innerHTML += parseddata;
 		});
 	});
+	$(".clearer").hover(function(){
+		document.getElementById("clearbutton").style.backgroundColor = "grey";
+	},
+	function() {
+		document.getElementById("clearbutton").style.backgroundColor = "#999999";
+	});
 });
+
+function checkForEnter() {
+	if (event.keyCode == 13)
+	{
+		addToList();
+	}
+}
+function addToList() {
+	var input = document.getElementById("inputBox").value.trim();
+	if (input !== "")
+	{
+		document.getElementById("inputBox").value = "";
+		document.getElementById("list").innerHTML += ('<li><span class="libg">'+input+'</li>');
+	} 
+}
+
+function clearList() {
+	document.getElementById("list").innerHTML = "";
+}

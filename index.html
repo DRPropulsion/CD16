@@ -15,27 +15,12 @@
 				<div>
 					<input id="inputBox" class="textbox" name="ingredBox" onkeydown="checkForEnter()"/>
 				</div>
-				<button id:"searchbutton" onclick="">Let's Get Cooking!</button>
+				<button class="searcher" id="searchbutton" onclick="">Let's Get Cooking!</button>
+				<button class="clearer" id="clearbutton" onclick="clearList()">Clear My Pantry</button>
 				<div>
 					<ul id="list"></ul>
 				</div> 
 			</div>
 		</div>
-		<script>
-			function checkForEnter() {
-				if (event.keyCode == 13)
-				{
-					addToList();
-				}
-			}
-			function addToList() {
-				var input = document.getElementById("inputBox").value.trim();
-				if (input !== "")
-				{
-					document.getElementById("inputBox").value = "";
-					document.getElementById("list").innerHTML += ('<li><span class="libg">'+input+'</li>');
-				} 
-			}
-		</script> 
 	</body>
 </html>
