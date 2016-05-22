@@ -57,7 +57,7 @@ $(document).ready(function() {
 			else {
 				var item = unparsedingredientsquery[i];
 				if (i===0) {
-					item = item.substring(23);
+					item = item.substring(46);
 				}
 				postedingredients += ('<span class="libg">'+item+'</span>') + " ";
 				ingredientquery += item + "%2C%20";
