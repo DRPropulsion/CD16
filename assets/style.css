@@ -231,12 +231,13 @@ html {
 	margin-right: -2%;
 	border: 2px solid #7F8C8D;
 	padding-top: 5%;
-	padding-bottom: 10%;
+	padding-bottom: 5%;
 	border-radius: 5px;
 	justify-content: center;
 	width: 96%;
 	background-color: #95A5A6;
 	margin-bottom: 2%;
+	text-align: left;
 }
 
 
@@ -291,7 +292,7 @@ html {
 
 .recipe img {
 	/*width: 150px;*/
-	height: 200px;
+	height: 180px;
 	float: left;
 	margin-left: 2%;
 	margin-right: 2%;
@@ -302,4 +303,10 @@ html {
 	border-radius: 5px;
 	background-color: #7F8C8D;
 	color: #FFD700;
+}
+
+.pun {
+	font-family: bariol;
+	color: black;
+	font-size: 20px;
 }

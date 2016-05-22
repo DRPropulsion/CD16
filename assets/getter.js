@@ -34,6 +34,25 @@ function clearList() {
 	document.getElementById("list").innerHTML = "";
 }
 
+//gets random food pun
+function getPun() {
+	var punlist = [
+		"\"Have you ever tried to eat a clock? It's very time consuming.\"",
+		"\"The girl quit her job at the doughnut factory because she was fed up with the hole business.\"",
+		"\"I relish the fact that you've mustard the strength to ketchup to me.\"",
+		"\"I decided that becoming a vegetarian was a missed steak.\"",
+		"\"When I opened the first snow-pea pod, one fell out and rolled under the fridge. One might say it was an escapea.\"",
+		"\"Old colanders never die, they just can't take the strain anymore.\"",
+		"\"Her company distributes gift boxed cashews and she has a delivery guy that drives her nuts.\"",
+		"\"When making butter there is little margarine for error.\"",
+		"\"My wife uses a kitchen implement to shred garlic and parmesan cheese, both of which I hate. It really is the grater of two evils.\"",
+		"\"I went to a buffet dinner with my neighbor, who is a taxidermist. After such a big meal, I was stuffed.\"",
+		"\"My mom ran out of poultry seasoning so she winged it.\"",
+		"\"I get distracted by all the meats in the deli section, must be my short attention spam.\"",
+		"\"We were going to ship a truck load of food, but we found it just wasn't palatable.\""];
+	var randomindex = Math.floor(Math.random() * punlist.length);
+	return punlist[randomindex];
+}
 
 //jquery functions: api ping and hover coloration for clear button
 $(document).ready(function() {
@@ -108,7 +127,8 @@ $(document).ready(function() {
 								+'<span><h1 class="recipeh1"><a href="'+data["recipes"][i]["source_url"]+'">'+data["recipes"][i]["title"]+'</a></h1>'
 								+'<h2 class="recipeh2"><a href="'+data["recipes"][i]["publisher_url"]+'">from '+data["recipes"][i]["publisher"]+'</a></h2>'
 								+'<h3>Social Rank  </h3>'
-								+'<span class="rank">'+socrank+'</span></span></li>');
+								+'<span class="rank">'+socrank+'</span></span>'
+								+'<p class="pun">'+getPun()+'</p></li>');
 				}
 				if (data["recipes"].length === 0) {
 					parseddata += '<span class="error">Alphabet Soup!  It looks like there\'s nothing containing all of your ingredients.  Please try a less detailed search.</span>';
