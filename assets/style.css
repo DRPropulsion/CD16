@@ -229,13 +229,14 @@ html {
 	width: 100%;
 	margin-left: 2%;
 	margin-right: -2%;
-	border: 2px solid #73AD21;
+	border: 2px solid #7F8C8D;
 	padding-top: 5%;
 	padding-bottom: 10%;
 	border-radius: 5px;
 	justify-content: center;
 	width: 96%;
-	
+	background-color: #95A5A6;
+	margin-bottom: 2%;
 }
 
 
@@ -243,8 +244,8 @@ html {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;	
-	color: gray;
-	font-family: lato;
+	color: black;
+	font-family: bariol;
 	font-size: 40px;
 	text-align: left;
 	width: auto;
@@ -257,23 +258,25 @@ html {
 
 
 .recipe h2 {
-	color: gray;
-	font-family: lato;
+	color: #2C3E50;
+	font-family: bariol;
 	font-size: 27px;
 	text-align: left;
 	margin-top: 0px;
 }
 
 .recipe h3 {
-	color: gray;
-	font-family: lato;
+	color: #34495E;
+	font-family: lato-light;
 	font-size: 25px;
 	text-align: left;	
 	display: inline;
 }
 
+
+
 .recipe a:link {
-	color: gray;
+	color: black;
 	text-decoration: none;
 }
 .recipe a:hover {
@@ -293,6 +296,6 @@ html {
 
 .rank {
 	border-radius: 5px;
-	background-color: gray;
+	background-color: #7F8C8D;
 	color: #FFD700;
 }

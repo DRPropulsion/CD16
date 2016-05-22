@@ -39,6 +39,7 @@ function clearList() {
 $(document).ready(function() {
 	$("#searchbutton").click(function() { 
 		//$.get("http://food2fork.com/api/search?key=c8b4412d38aeeade93c0bab3425f24ce&q=", function(data) {
+		addToList();
 		var listofingredients = document.getElementById("list").innerHTML;
 		//console.log(listofingredients);
 		var unparsedingredientsquery = listofingredients.split(('</span></li><li><span class="libg" onclick="remove(this)">'));
