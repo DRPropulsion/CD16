@@ -240,3 +240,7 @@ html {
 	text-indent: 200px;
 }
 
+.recipe a {
+	color: gray;
+	text-decoration: none;
+}
