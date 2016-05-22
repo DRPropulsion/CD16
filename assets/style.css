@@ -230,7 +230,7 @@ html {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;	
-	color: black;
+	color: gray;
 	font-family: lato;
 	font-size: 40px;
 	text-align: left;
@@ -241,11 +241,7 @@ html {
 	margin-bottom: 0px;
 	
 }
-hover {
-	text-decoration: underline;
-	color: blue;
-	
-}
+
 
 .recipe h2 {
 	color: gray;
@@ -265,9 +261,14 @@ hover {
 	text-indent: 200px;
 }
 
-.recipe a {
+.recipe a:link {
 	color: gray;
 	text-decoration: none;
+}
+.recipe a:hover {
+	color: #4CAF50;
+	text-decoration: underline;
+	
 }
 
 .recipe img {
