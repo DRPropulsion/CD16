@@ -49,7 +49,21 @@ function getPun() {
 		"\"I went to a buffet dinner with my neighbor, who is a taxidermist. After such a big meal, I was stuffed.\"",
 		"\"My mom ran out of poultry seasoning so she winged it.\"",
 		"\"I get distracted by all the meats in the deli section, must be my short attention spam.\"",
-		"\"We were going to ship a truck load of food, but we found it just wasn't palatable.\""];
+		"\"We were going to ship a truck load of food, but we found it just wasn't palatable.\"",
+		"\"My best friend and I attended culinary school together and then opened our own restaurant. I guess we are taste buds.\"",
+		"\"The evil onion had many lairs.\"",
+		"\"I tried to finish the leftovers, but ... foiled again.\"",
+		"\"I can't tell you where to buy soy sauce tonight, but I can shoyu tamari.\"",
+		"\"The cannibal hitman preferred take out food.\"",
+		"\"It's very rare to find a steak this well done by a medium.\"",
+		"\"Even covered in salad dressing my lettuce looked bare, so I put some cloves on it.\"",
+		"\"My friend came around for dinner. We ate for 20 minutes, then he fainted again.\"",
+		"\"I met a man who loves eating couches. I think he has a suite tooth.\"",
+		"\"Two loaves of bread wanted to get married, so they eloafed.\"",
+		"\"\'I agree with you wholeheartedly,\' said the artichoke grower.\"",
+		"\"People who eat their apples stem and seed and all improve their core values.\"",
+		"\"A man was ambidextrous, he could eat sugar with both hands.\"",
+		"\"The Vatican's supplier of duck eggs is elected by sacred balut.\""];
 	var randomindex = Math.floor(Math.random() * punlist.length);
 	return punlist[randomindex];
 }
