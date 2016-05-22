@@ -100,6 +100,12 @@ li {
 	border: solid 2px wheat;
 	border-radius: 5px;
 }
+
+p {
+	font-family: lato;
+	font-size: 40px;
+	color: gray;
+}
 	
 body {
 	font-family: lato;

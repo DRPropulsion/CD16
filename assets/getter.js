@@ -44,23 +44,25 @@ $(document).ready(function() {
 			document.getElementById("recipelist").innerHTML = "";
 			var listofingredients = document.getElementById("list").innerHTML;
 			console.log(listofingredients);
-			//var unparsedingredients = document.getElementsByTagName("li");
+			var unparsedingredients = listofingredients.split("</li><li>");
 			var parseddata = "";
-			var postedingredients = "<p>";
+			var postedingredients = "<p>You searched for: ";
 			
-			for (var i = 0; i < listofingredients.length; i++) {
-				console.log(listofingredients[i]);
+			for (var i = 0; i < unparsedingredients.length; i++) {
+				if (i === unparsedingredients.length - 1) {
+					var item = unparsedingredients[i];
+					item = item.substring(0, item.length-5);
+					postedingredients += item;
+				}
+				else {
+					var item = unparsedingredients[i];
+					if (i===0) {
+						item = item.substring(4);
+					}
+					postedingredients += item + " ";
+				}
 			}
-			
-			/*for (var i = 0; i < unparsedingredients.length; i++) {
-				//add each ingredient in
-				postedingredients += ('<span class="libg">'+item.innerHTML+'</span>'+" ")
-			}*/
-			//TODO: this is broken!!
-			/*Array.from(document.getElementsByClassName("libg")).forEach(function(item) {
-				//add each ingredient in
-				postedingredients += ('<span class="libg">'+item.innerHTML+'</span>'+" ")
-			}*/
+
 			postedingredients += "</p>";
 			
 			/*THIS IS HOW YOU PARSE THE JSON
@@ -73,11 +75,11 @@ $(document).ready(function() {
 			for (var i = 0; i < data["recipes"].length; i++) {
 				
 				parseddata += ('<li class="recipe">'
-							+'<a href="'+data["recipes"][i]["source_url"]+'"><img src="'+data["recipes"][i]["image_url"]+'"></img></a>'
-							+'<h1><a href="'+data["recipes"][i]["source_url"]+'">'+data["recipes"][i]["title"]+'</a></h1>'
+							+'<div><a href="'+data["recipes"][i]["source_url"]+'"><img src="'+data["recipes"][i]["image_url"]+'"></img></a></div>'
+							+'<div><h1><a href="'+data["recipes"][i]["source_url"]+'">'+data["recipes"][i]["title"]+'</a></h1>'
 							+'<h2>by '+data["recipes"][i]["publisher"]+'</h2>'
 							+'<h3>Social Rank</h3>'
-							+'<span class="SOMETHING">'+data["recipes"][i]["social_rank"]+'</span></li>');
+							+'<span class="SOMETHING">'+data["recipes"][i]["social_rank"]+'</span></div></li>');
 			}
 			var modalobject = document.getElementById("recipeModal")
 			document.getElementById("postedlist").innerHTML += postedingredients;
