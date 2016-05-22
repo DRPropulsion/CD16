@@ -62,6 +62,25 @@ a {
 	text-decoration: underline; 
 	color: #49B0C4}
 
+ul {
+	list-style-type: none;
+	color: white;
+	font-size: 35px;
+	width: 100%;
+	
+}
+
+li {
+	margin-bottom: 0.5%;
+	margin-top: 0.5%;
+}
+
+.libg {
+	background: gray;
+	border-radius: 5px;
+
+}
+	
 body {
 	font-family: lato;
 	font-size: 16px;
