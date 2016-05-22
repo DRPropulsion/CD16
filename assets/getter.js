@@ -42,14 +42,20 @@ $(document).ready(function() {
 			//console.log(data);
 			document.getElementById("postedlist").innerHTML = "";
 			document.getElementById("recipelist").innerHTML = "";
-			var unparsedingredients = document.getElementsByClassName("libg");
+			var listofingredients = document.getElementById("list").innerHTML;
+			console.log(listofingredients);
+			//var unparsedingredients = document.getElementsByTagName("li");
 			var parseddata = "";
 			var postedingredients = "<p>";
 			
-			for (var i = 0; i < unparsedingredients.length; i++) {
+			for (var i = 0; i < listofingredients.length; i++) {
+				console.log(listofingredients[i]);
+			}
+			
+			/*for (var i = 0; i < unparsedingredients.length; i++) {
 				//add each ingredient in
 				postedingredients += ('<span class="libg">'+item.innerHTML+'</span>'+" ")
-			}
+			}*/
 			//TODO: this is broken!!
 			/*Array.from(document.getElementsByClassName("libg")).forEach(function(item) {
 				//add each ingredient in
@@ -67,8 +73,8 @@ $(document).ready(function() {
 			for (var i = 0; i < data["recipes"].length; i++) {
 				
 				parseddata += ('<li class="recipe">'
-							+'<h1><a href="'+data["recipes"][i]["source_url"]+'">'+data["recipes"][i]["title"]+'</a></h1>'
 							+'<a href="'+data["recipes"][i]["source_url"]+'"><img src="'+data["recipes"][i]["image_url"]+'"></img></a>'
+							+'<h1><a href="'+data["recipes"][i]["source_url"]+'">'+data["recipes"][i]["title"]+'</a></h1>'
 							+'<h2>by '+data["recipes"][i]["publisher"]+'</h2>'
 							+'<h3>Social Rank</h3>'
 							+'<span class="SOMETHING">'+data["recipes"][i]["social_rank"]+'</span></li>');
