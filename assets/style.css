@@ -1,0 +1,63 @@
+@font-face {
+	font-family:bariol;
+	src:url(bariol_regular-webfont.ttf); }
+
+@font-face {
+	font-family:script;
+	src:url(Arizonia-Regular.ttf); }
+	
+@font-face {
+	font-family:lato;
+	src:url(Lato-Regular.ttf); }
+	
+@font-face {
+	font-family:lato-light;
+	src:url(Lato-Light.ttf); }
+
+html, body {
+height:auto;
+width:auto; 
+margin: 0;
+padding: 0;
+}
+
+header {
+	justify-content: center;
+	font-size: 50px;
+	margin-bottom: 0;
+	margin-top: 1%;
+	font-family: lato;
+	color: white;
+}
+
+.padded {
+	padding: 20% 0;
+	}
+
+div {
+	clear: none;
+}
+
+a {
+	text-decoration: none; 
+	color: inherit;}
+	a:hover {
+	text-decoration: underline; 
+	color: #49B0C4}
+
+body {
+	font-family: lato;
+	font-size: 16px;
+	line-height: 1;
+	color: black;
+	text-align: center;
+	justify-content: center; 
+	background-image: url(bg.jpg); 
+	background-attachment:fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	-webkit-background-size: cover;
+	
+}
