@@ -17,11 +17,22 @@ $(document).ready(function() {
 			var actualdata = data.substring(24, data.length - 1);
 			document.getElementById("statement").innerHTML = "";
 			var datatoparse = JSON.parse(actualdata);
+			var unparsedingredients = document.getElementById("list");
 			var parseddata = "";
+			var postedingredients = "";
 			for (var key in datatoparse) {
-				parseddata += datatoparse[key]["publisher"] + " " + datatoparse[key]["title"] + " " + datatoparse[key]["source_url"] + "BREAK" + '<br/>';
+				//you can (and should!) change this
+				//parseddata += datatoparse[key]["publisher"] + " " + datatoparse[key]["title"] + " " + datatoparse[key]["source_url"] + "BREAK" + '<br/>';
+				
+				parseddata += ('<li class="WHATEVER">'
+							+'<h1><a href="'+datatoparse[key]["source_url"]+'">'+datatoparse[key]["title"]+'</h1>'
+							+'<img src="'+datatoparse[key]["image-url"]+'"></img>'
+							+'<h2>'+datatoparse[key]["publisher"]+'</h2>'
+							+'<h3>'+datatoparse[key]["social_rank"]+'</h3>'
+							+'<span class="SOMETHING">'+datatoparse[key]["social_rank"]+'</span></li>');
 			}
-			document.getElementById("statement").innerHTML += parseddata;
+			document.getElementById("postedlist").innerHTML += postedingredients;
+			document.getElementById("recipeList").innerHTML += parseddata;
 		});
 	});
 	$(".clearer").hover(function(){
