@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>
+	This is a learning experience
+</h1>
+
+
+<textarea id="inputBox" rows="2" cols="10">
+
+</textarea>
+
+<button type="button" onclick="addToList()"> Add To List </button>
+
+<ul id="list"> </ul>
+
+<p id="output"></p>
+
+<script>
+	
+
+	function addToList() {
+		var input = document.getElementById("inputBox").value;
+
+		document.getElementById("inputBox").value = "";
+
+		document.getElementById("list").innerHTML += ('<li>'+input+'</li>');
+
+	}
+
+
+
+
+</script>
+
+
+</body>
+</html>
