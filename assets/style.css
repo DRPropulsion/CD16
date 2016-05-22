@@ -273,9 +273,13 @@ html {
 	display: inline;
 }
 
+.recipeh2 a:link{
+	color: #2C3E50;
+	text-decoration: none;
+}
 
 
-.recipe a:link {
+.recipeh1 a:link {
 	color: black;
 	text-decoration: none;
 }
