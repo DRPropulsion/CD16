@@ -31,7 +31,10 @@ header {
 	padding-bottom: 1%
 }
 .padded {
-	padding: 20% 0;
+	padding-top: 20%;
+	padding-bottom: 0;
+	padding-left: 0;
+	padding-right: 0;
 	width: 100%
 	}
 	
@@ -190,15 +193,19 @@ html {
 
 /* The Close Button */
 .close {
-    color: white;
+    font-family: lato;
+	color: black;
     float: right;
-    font-size: 28px;
+    font-size: 30px;
     font-weight: bold;
+	margin-right: 0.1%;
+	margin-top: 0;
+
 }
 
 .close:hover,
 .close:focus {
-    color: #000;
+    color: gray;
     text-decoration: none;
     cursor: pointer;
 }

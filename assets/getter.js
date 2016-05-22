@@ -101,13 +101,13 @@ $(document).ready(function() {
 				*/
 				
 				for (var i = 0; i < data["recipes"].length; i++) {
-					
+					var socrank = Math.floor(100 * data["recipes"][i]["social_rank"])/100.0;
 					parseddata += ('<li class="recipe">'
 								+'<a href="'+data["recipes"][i]["source_url"]+'"><img src="'+data["recipes"][i]["image_url"]+'"></img></a>'
 								+'<span><h1><a href="'+data["recipes"][i]["source_url"]+'">'+data["recipes"][i]["title"]+'</a></h1>'
 								+'<h2>from '+data["recipes"][i]["publisher"]+'</h2>'
-								+'<h3>Social Rank</h3>'
-								+'<span class="rank">'+data["recipes"][i]["social_rank"]+'</span></span></li>');
+								+'<h3>Social Rank  </h3>'
+								+'<span class="rank">'+socrank+'</span></span></li>');
 				}
 				if (data["recipes"].length === 0) {
 					parseddata += '<span class="error">Alphabet Soup!  It looks like there\'s nothing containing all of your ingredients.  Please try a less detailed search.</span>';
@@ -116,6 +116,7 @@ $(document).ready(function() {
 				document.getElementById("postedlist").innerHTML += postedingredients;
 				document.getElementById("recipelist").innerHTML += parseddata;
 				modalobject.style.display = "block";
+				spinner.stop();
 			});
 		}
 	});
