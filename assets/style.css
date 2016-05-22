@@ -126,11 +126,7 @@ html {
 	background-size: cover;
 }
 
-.recipe {
-	background-color: gold;
-	border-radius: 5px;
-	
-}
+
 
 .modal {
     display: none; /* Hidden by default */
@@ -199,5 +195,48 @@ html {
     padding: 2px 16px;
     background-color: #5cb85c;
     color: white;
+}
+
+
+.recipe {
+	width: 60%;
+	
+	border: 2px solid #73AD21;
+	margin-left: 20%;
+	padding-top: 0px;
+}
+
+
+.recipe h1 {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;	
+	color: black;
+	font-family: lato;
+	font-size: 40px;
+	text-align: left;
+	text-indent: 200px;
+	width: 100%;
+	line-height: 120%;
+	margin-top: -20px;
+	margin-bottom: 0px;
+}
+
+.recipe h2 {
+	color: gray;
+	font-family: lato;
+	font-size: 27px;
+	text-align: left;
+	text-indent: 200px;
+	margin-top: 0px;
+
+}
+
+.recipe h3 {
+	color: gray;
+	font-family: lato;
+	font-size: 30px;
+	text-align: left;	
+	text-indent: 200px;
 }
 
