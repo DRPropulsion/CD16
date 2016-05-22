@@ -200,8 +200,11 @@ html {
 /* The Close Button */
 .close {
     font-family: lato;
-	color: black;
+	font-weight: 900px;
+	color: white;
     float: right;
+	position: fixed;
+	right:19%;
     font-size: 30px;
     font-weight: bold;
 	margin-right: 0.1%;
