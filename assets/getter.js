@@ -17,6 +17,10 @@ function checkForEnter() {
 		addToList();
 		document.getElementById("inputBox").placeholder = "";
 	}
+	else if (event.keycode == 27)
+	{
+		closeResults();
+	}
 }
 
 //adds object to pantry list
@@ -151,7 +155,6 @@ $(document).ready(function() {
 				document.getElementById("postedlist").innerHTML += postedingredients;
 				document.getElementById("recipelist").innerHTML += parseddata;
 				modalobject.style.display = "block";
-				spinner.stop();
 			});
 		}
 	});
