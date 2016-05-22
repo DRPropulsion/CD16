@@ -10,6 +10,7 @@
 	xhttp.send();
 }*/
 
+//jquery functions: api ping and hover coloration for clear button
 $(document).ready(function() {
 	$("#searchbutton").click(function() {
 		$.get("http://food2fork.com/api/search?key=c8b4412d38aeeade93c0bab3425f24ce&q=bread", function(data) {
@@ -31,12 +32,15 @@ $(document).ready(function() {
 	});
 });
 
+//checks to see if keypress is enter
 function checkForEnter() {
 	if (event.keyCode == 13)
 	{
 		addToList();
 	}
 }
+
+//adds object to pantry list
 function addToList() {
 	var input = document.getElementById("inputBox").value.trim();
 	if (input !== "")
@@ -46,6 +50,7 @@ function addToList() {
 	} 
 }
 
+//clears the pantry list
 function clearList() {
 	document.getElementById("list").innerHTML = "";
 }

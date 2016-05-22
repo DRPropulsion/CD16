@@ -8,15 +8,12 @@
 		<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
 		<script src="assets/getter.js"></script>
 	</head>
-	<body>
-				
+	<body>		
 		<div id="recipeModal" class="modal">
-		
 			<div class="modal-content">
 				<p> hello this is a test </p>
 				<span class="close" onclick="closeResults()">x</span>
 			</div>
-			
 		</div>
 	
 	
@@ -27,53 +24,28 @@
 				<div>
 					<input id="inputBox" class="textbox" name="ingredBox" onkeydown="checkForEnter()"/>
 				</div>
-<<<<<<< HEAD
 				
-				<button id="recipes" onclick="showResults()">Let's Get Cooking!</button>
-								
-=======
-				<button class="searcher" id="searchbutton" onclick="">Let's Get Cooking!</button>
+				<button class="searcher" id="searchbutton" onclick="showResults()">Let's Get Cooking!</button>
 				<button class="clearer" id="clearbutton" onclick="clearList()">Clear My Pantry</button>
->>>>>>> origin/master
+
 				<div>
 					<ul id="list"></ul>
 				</div> 
 			</div>
 		</div>
-<<<<<<< HEAD
 		
 		
 		<script>
-			function checkForEnter() {
-				if (event.keyCode == 13)
-				{
-					addToList();
-				}
-			}
-			function addToList() {
-				var input = document.getElementById("inputBox").value.trim();
-				if (input !== "")
-				{
-					document.getElementById("inputBox").value = "";
-					document.getElementById("list").innerHTML += ('<li><span class="libg">'+input+'</li>');
-				}
-			}
-			
+			//Opens the modal
 			function showResults() {
 				modal.style.display = "block";
 			}
-			
+			//Closes the modal
 			function closeResults() {
 				modal.style.display = "none";
 			}
 			// Get the modal
 			var modal = document.getElementById("recipeModal");
-
-			// Get the button that opens the modal
-			var btn = document.getElementById("recipes");
-
-			// Get the <span> element that closes the modal
-			var span = document.getElementsByClassName("close")[0];
 
 			// When the user clicks anywhere outside of the modal, close it
 			window.onclick = function(event) {
@@ -82,7 +54,5 @@
 				}
 			}
 		</script>
-=======
->>>>>>> origin/master
 	</body>
 </html>
