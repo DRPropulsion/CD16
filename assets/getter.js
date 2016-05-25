@@ -17,7 +17,7 @@ function checkForEnter() {
 		addToList();
 		document.getElementById("inputBox").placeholder = "";
 	}
-	else if (event.keycode == 27)
+	else if (event.keyCode == 27)
 	{
 		closeResults();
 	}
