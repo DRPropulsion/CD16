@@ -12,7 +12,7 @@
 		
 	</head>
 	<body>		
-		<div id="recipeModal" class="modal" onkeydown="checkForEnter()">
+		<div id="recipeModal" class="modal" onkeydown="checkESC()">
 			<div class="modal-content">
 				<!--<p> hello this is a test </p>-->
 				<span class="close" onclick="closeResults()">X</span>
@@ -27,7 +27,7 @@
 				<header>What's in your pantry today?</header>
 				<div class="second">
 				<div>
-					<input id="inputBox" class="textbox" name="ingredBox" onkeydown="checkESC()"/>
+					<input id="inputBox" class="textbox" name="ingredBox" onkeydown="checkForEnter()"/>
 				</div>
 				
 				<button class="searcher" id="searchbutton" >Let's Get Cooking!</button>
